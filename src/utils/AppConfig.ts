@@ -13,7 +13,7 @@ export const AppConfig = {
       name: 'English',
     },
     { id: 'fr', name: 'Français' },
-    { id: 'zh-TW', name: '繁體中文' }, //
+    { id: 'zh', name: '繁體中文' }, //
   ],
   defaultLocale: 'en',
   localePrefix,

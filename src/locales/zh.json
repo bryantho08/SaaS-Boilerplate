@@ -1,166 +1,166 @@
 {
   "Index": {
-    "meta_title": "SaaS Template - The perfect SaaS template to build and scale your business with ease.",
-    "meta_description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS."
+    "meta_title": "Frelio - 專為自由職業者設計的一體化工作管理系統",
+    "meta_description": "整合提案、任務、履歷、財務與報告功能，協助自由職業者從接案到收款的全流程管理系統。"
   },
   "Navbar": {
-    "sign_in": "Sign In",
-    "sign_up": "Sign Up",
-    "product": "Product",
-    "docs": "Docs",
-    "blog": "Blog",
-    "community": "Community",
-    "company": "Company"
+    "sign_in": "登入",
+    "sign_up": "註冊",
+    "product": "產品",
+    "docs": "文檔",
+    "blog": "部落格",
+    "community": "社群",
+    "company": "公司"
   },
   "Hero": {
-    "follow_twitter": "Follow @Ixartz on Twitter",
-    "title": "The perfect <important>SaaS template</important> to build and scale your business with ease.",
-    "description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS.",
-    "primary_button": "Get Started",
-    "secondary_button": "Star on GitHub"
+    "follow_twitter": "在Twitter關注@Ixartz",
+    "title": "專為<important>自由職業者</important>設計的一體化工作管理系統",
+    "description": "整合提案、任務、履歷、財務與報告功能，協助自由職業者從接案到收款的全流程管理。",
+    "primary_button": "開始使用",
+    "secondary_button": "在GitHub上加星"
   },
   "Sponsors": {
-    "title": "Sponsored by"
+    "title": "贊助商"
   },
   "Features": {
-    "section_subtitle": "Features",
-    "section_title": "Unlock the Full Potential of the SaaS Template",
-    "section_description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS.",
-    "feature1_title": "Node.js",
-    "feature2_title": "React",
-    "feature3_title": "Tailwind CSS",
-    "feature4_title": "TypeScript",
-    "feature5_title": "Shadcn UI",
-    "feature6_title": "ESLint",
-    "feature_description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS."
+    "section_subtitle": "功能特點",
+    "section_title": "釋放Frelio系統的全部潛力",
+    "section_description": "整合提案、任務、履歷、財務與報告功能，協助自由職業者從接案到收款的全流程管理。",
+    "feature1_title": "專案管理",
+    "feature2_title": "任務追蹤",
+    "feature3_title": "待辦事項",
+    "feature4_title": "財務管理",
+    "feature5_title": "客戶關係",
+    "feature6_title": "數據報表",
+    "feature_description": "協助自由職業者高效管理工作流程，提高工作效率和收益。"
   },
   "Pricing": {
-    "section_subtitle": "Features",
-    "section_title": "Unlock the Full Potential of the SaaS Template",
-    "section_description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS.",
-    "button_text": "Get Started"
+    "section_subtitle": "價格方案",
+    "section_title": "選擇最適合您的計劃",
+    "section_description": "我們提供多種靈活的價格方案，滿足不同自由職業者的需求。",
+    "button_text": "開始使用"
   },
   "PricingPlan": {
-    "free_plan_name": "Free",
-    "premium_plan_name": "Premium",
-    "enterprise_plan_name": "Enterprise",
-    "free_plan_description": "For individuals",
-    "premium_plan_description": "For small teams",
-    "enterprise_plan_description": "For industry leaders",
-    "feature_team_member": "{number} Team Members",
-    "feature_website": "{number} Websites",
-    "feature_storage": "{number} GB Storage",
-    "feature_transfer": "{number} TB Transfer",
-    "feature_email_support": "Email Support",
-    "plan_interval_month": "month",
-    "plan_interval_year": "year",
-    "next_renew_date": "Your subscription renews on {date}"
+    "free_plan_name": "免費版",
+    "premium_plan_name": "進階版",
+    "enterprise_plan_name": "企業版",
+    "free_plan_description": "適合個人",
+    "premium_plan_description": "適合小型團隊",
+    "enterprise_plan_description": "適合行業領袖",
+    "feature_team_member": "{number} 團隊成員",
+    "feature_website": "{number} 網站",
+    "feature_storage": "{number} GB 儲存空間",
+    "feature_transfer": "{number} TB 傳輸量",
+    "feature_email_support": "電子郵件支援",
+    "plan_interval_month": "月",
+    "plan_interval_year": "年",
+    "next_renew_date": "您的訂閱將於 {date} 續費"
   },
   "FAQ": {
-    "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-    "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam enim dui, id consequat turpis ullamcorper ac. Mauris id quam dolor. Nullam eu egestas turpis. Proin risus elit, sollicitudin in mi a, accumsan euismod turpis. In euismod mi sed diam tristique hendrerit."
+    "question": "Frelio如何幫助自由職業者管理工作流程？",
+    "answer": "Frelio提供全面的工作管理解決方案，包括專案追蹤、任務管理、客戶關係管理、財務追蹤和報表生成。系統採用直觀的卡片式界面，讓自由職業者能夠輕鬆管理從接案到收款的全流程。"
   },
   "CTA": {
-    "title": "You are ready?",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "button_text": "Star on GitHub"
+    "title": "準備好開始了嗎？",
+    "description": "立即註冊Frelio，提升您的工作效率並增加收益。",
+    "button_text": "免費註冊"
   },
   "Footer": {
-    "product": "Product",
-    "docs": "Docs",
-    "blog": "Blog",
-    "community": "Community",
-    "company": "Company",
-    "terms_of_service": "Terms Of Service",
-    "privacy_policy": "Privacy Policy",
-    "designed_by": "Designed by <author></author>."
+    "product": "產品",
+    "docs": "文檔",
+    "blog": "部落格",
+    "community": "社群",
+    "company": "公司",
+    "terms_of_service": "服務條款",
+    "privacy_policy": "隱私政策",
+    "designed_by": "設計者 <author></author>"
   },
   "ProtectFallback": {
-    "not_enough_permission": "You do not have the permissions to perform this action"
+    "not_enough_permission": "您沒有執行此操作的權限"
   },
   "SignIn": {
-    "meta_title": "Sign in",
-    "meta_description": "Seamlessly sign in to your account with our user-friendly login process."
+    "meta_title": "登入",
+    "meta_description": "通過我們用戶友好的登入流程無縫訪問您的帳戶。"
   },
   "SignUp": {
-    "meta_title": "Sign up",
-    "meta_description": "Effortlessly create an account through our intuitive sign-up process."
+    "meta_title": "註冊",
+    "meta_description": "輕鬆創建帳戶，開始使用Frelio提升您的工作效率。"
   },
   "DashboardLayout": {
-    "home": "Home",
-    "todos": "Todos",
-    "members": "Members",
-    "billing": "Billing",
-    "settings": "Settings"
+    "home": "首頁",
+    "todos": "待辦事項",
+    "members": "成員",
+    "billing": "帳單",
+    "settings": "設置"
   },
   "Dashboard": {
-    "meta_title": "SaaS Template Dashboard",
-    "meta_description": "A free and open-source landing page template for your SaaS business, built with Next.js, TypeScript, Shadcn UI, and Tailwind CSS."
+    "meta_title": "Frelio儀表板",
+    "meta_description": "專為自由職業者設計的一體化工作管理系統儀表板。"
   },
   "DashboardIndex": {
-    "title_bar": "Dashboard",
-    "title_bar_description": "Welcome to your dashboard",
-    "message_state_title": "Let's get started",
-    "message_state_description": "You can customize this page by editing the file at <code>dashboard/page.tsx</code>",
-    "message_state_button": "Star on GitHub",
-    "message_state_alternative": "Want more features using the same stack? Try <url></url>."
+    "title_bar": "儀表板",
+    "title_bar_description": "歡迎使用您的儀表板",
+    "message_state_title": "讓我們開始吧",
+    "message_state_description": "您可以通過編輯 <code>dashboard/page.tsx</code> 文件來自定義此頁面",
+    "message_state_button": "在GitHub上加星",
+    "message_state_alternative": "想要使用相同技術棧的更多功能？嘗試 <url></url>"
   },
   "UserProfile": {
-    "title_bar": "User Profile",
-    "title_bar_description": "View and manage your user profile"
+    "title_bar": "用戶資料",
+    "title_bar_description": "查看和管理您的用戶資料"
   },
   "OrganizationProfile": {
-    "title_bar": "Organization Management",
-    "title_bar_description": "Manage your organization"
+    "title_bar": "組織管理",
+    "title_bar_description": "管理您的組織"
   },
   "Billing": {
-    "title_bar": "Billing",
-    "title_bar_description": "Manage your billing and subscription",
-    "current_section_title": "Current Plan",
-    "current_section_description": "Adjust your payment plan to best suit your requirements",
-    "manage_subscription_button": "Manage Subscription"
+    "title_bar": "帳單",
+    "title_bar_description": "管理您的帳單和訂閱",
+    "current_section_title": "當前方案",
+    "current_section_description": "調整您的付款計劃以最符合您的需求",
+    "manage_subscription_button": "管理訂閱"
   },
   "BillingOptions": {
-    "current_plan": "Current Plan",
-    "upgrade_plan": "Get Started"
+    "current_plan": "當前方案",
+    "upgrade_plan": "開始使用"
   },
   "CheckoutConfirmation": {
-    "title_bar": "Payment Confirmation",
-    "message_state_title": "Payment successful",
-    "message_state_description": "Your payment has been successfully processed. Thank you for your purchase!",
-    "message_state_button": "Go back to Billing"
+    "title_bar": "付款確認",
+    "message_state_title": "付款成功",
+    "message_state_description": "您的付款已成功處理。感謝您的購買！",
+    "message_state_button": "返回帳單"
   },
   "DataTable": {
-    "no_results": "No results."
+    "no_results": "無結果。"
   },
   "Todos": {
-    "title_bar": "Todo List",
-    "title_bar_description": "View and manage your todo list",
-    "add_todo_button": "New todo"
+    "title_bar": "待辦事項清單",
+    "title_bar_description": "查看和管理您的待辦事項清單",
+    "add_todo_button": "新增待辦事項"
   },
   "TodoTableColumns": {
-    "open_menu": "Open menu",
-    "edit": "Edit",
-    "delete": "Delete",
-    "title_header": "Title",
-    "message_header": "Message",
-    "created_at_header": "Created at"
+    "open_menu": "打開選單",
+    "edit": "編輯",
+    "delete": "刪除",
+    "title_header": "標題",
+    "message_header": "訊息",
+    "created_at_header": "創建時間"
   },
   "AddTodo": {
-    "title_bar": "Add Todo",
-    "add_todo_section_title": "Create a new todo",
-    "add_todo_section_description": "Fill in the form below to create a new todo"
+    "title_bar": "添加待辦事項",
+    "add_todo_section_title": "創建新待辦事項",
+    "add_todo_section_description": "填寫下面的表單以創建新的待辦事項"
   },
   "EditTodo": {
-    "title_bar": "Edit todo",
-    "edit_todo_section_title": "Modify todo",
-    "edit_todo_section_description": "Fill in the form below to edit the todo"
+    "title_bar": "編輯待辦事項",
+    "edit_todo_section_title": "修改待辦事項",
+    "edit_todo_section_description": "填寫下面的表單以編輯待辦事項"
   },
   "TodoForm": {
-    "title_label": "Title",
-    "title_description": "Enter a descriptive title for your todo.",
-    "message_title": "Message",
-    "message_description": "Enter a detailed message for your todo.",
-    "submit_button": "Submit"
+    "title_label": "標題",
+    "title_description": "為您的待辦事項輸入描述性標題。",
+    "message_title": "訊息",
+    "message_description": "為您的待辦事項輸入詳細訊息。",
+    "submit_button": "提交"
   }
 }
