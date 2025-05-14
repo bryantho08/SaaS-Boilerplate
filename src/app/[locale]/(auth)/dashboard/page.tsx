@@ -1,4 +1,7 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 import { Sidebar } from '@/components/layouts/sidebar';
 import { Topbar } from '@/components/layouts/topbar';
@@ -8,15 +11,19 @@ import { SponsorLogos } from '@/features/sponsors/SponsorLogos';
 
 export default function DashboardIndexPage() {
   const t = useTranslations('DashboardIndex');
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarCollapsed(!sidebarCollapsed);
+  };
 
   return (
     <div className="flex h-screen">
-      <Sidebar />
+      <Sidebar collapsed={sidebarCollapsed} />
 
       <div className="flex flex-1 flex-col overflow-auto bg-background dark:bg-slate-950">
-        <header className="flex h-16 items-center justify-between border-b px-4">
-          <h1 className="text-xl font-semibold">儀表板</h1>
-          <Topbar />
+        <header className="flex h-16 items-center border-b px-4">
+          <Topbar toggleSidebar={toggleSidebar} />
         </header>
 
         <main className="flex-1 p-6">
