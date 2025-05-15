@@ -1,16 +1,19 @@
 'use client';
 
 import {
+  ArrowDownCircle,
+  ArrowUpCircle,
+  BarChartBig,
   Briefcase,
   CalendarClock,
+  CalendarDays,
   CheckCircle,
   ClipboardList,
   CreditCard,
-  DollarSign,
   FileText,
   Folder,
   HomeIcon,
-  LineChart,
+  LayoutDashboard,
   Settings,
   User2,
   UserCircle,
@@ -45,7 +48,7 @@ const SidebarItem = ({ href, icon: Icon, children, collapsed = false }: SidebarI
           : 'text-muted-foreground hover:bg-muted hover:text-foreground',
       )}
     >
-      <Icon className="size-5" />
+      <Icon className="size-4" />
       {!collapsed && <span>{children}</span>}
     </Link>
   );
@@ -70,7 +73,7 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
         <nav className="flex flex-col gap-2 px-2">
           {!collapsed && (
             <>
-              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">Menu</p>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">選單</p>
               <Separator className="my-1" />
             </>
           )}
@@ -81,7 +84,7 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
 
           {!collapsed && (
             <>
-              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">工作模組</p>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">工作管理</p>
               <Separator className="my-1" />
             </>
           )}
@@ -117,10 +120,10 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
             </>
           )}
 
-          <SidebarItem href={`/${locale}/incomes`} icon={DollarSign} collapsed={collapsed}>
+          <SidebarItem href={`/${locale}/incomes`} icon={ArrowDownCircle} collapsed={collapsed}>
             收入
           </SidebarItem>
-          <SidebarItem href={`/${locale}/expenses`} icon={DollarSign} collapsed={collapsed}>
+          <SidebarItem href={`/${locale}/expenses`} icon={ArrowUpCircle} collapsed={collapsed}>
             支出
           </SidebarItem>
           <SidebarItem href={`/${locale}/invoices`} icon={Folder} collapsed={collapsed}>
@@ -137,25 +140,25 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
             </>
           )}
 
-          <SidebarItem href={`/${locale}/reports/actual-month`} icon={LineChart} collapsed={collapsed}>
+          <SidebarItem href={`/${locale}/reports/actual-month`} icon={LayoutDashboard} collapsed={collapsed}>
             本月概覽
           </SidebarItem>
-          <SidebarItem href={`/${locale}/reports/monthly`} icon={LineChart} collapsed={collapsed}>
+          <SidebarItem href={`/${locale}/reports/monthly`} icon={CalendarDays} collapsed={collapsed}>
             月度報告
           </SidebarItem>
-          <SidebarItem href={`/${locale}/reports/yearly`} icon={LineChart} collapsed={collapsed}>
+          <SidebarItem href={`/${locale}/reports/yearly`} icon={BarChartBig} collapsed={collapsed}>
             年度報告
           </SidebarItem>
 
           {!collapsed && (
             <>
-              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">個人資料</p>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">業務資訊</p>
               <Separator className="my-1" />
             </>
           )}
 
           <SidebarItem href={`/${locale}/profile`} icon={UserCircle} collapsed={collapsed}>
-            個人頁
+            簡介
           </SidebarItem>
           <SidebarItem href={`/${locale}/resume`} icon={Briefcase} collapsed={collapsed}>
             履歷
@@ -163,13 +166,13 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
 
           {!collapsed && (
             <>
-              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">Organization</p>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">組織管理</p>
               <Separator className="my-1" />
             </>
           )}
 
           <SidebarItem href={`/${locale}/billing`} icon={CreditCard} collapsed={collapsed}>
-            Billing
+            訂閱
           </SidebarItem>
           <SidebarItem href={`/${locale}/members`} icon={Users} collapsed={collapsed}>
             成員
