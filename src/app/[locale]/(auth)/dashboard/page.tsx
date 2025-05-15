@@ -6,7 +6,6 @@ import { useState } from 'react';
 import { Sidebar } from '@/components/layouts/sidebar';
 import { Topbar } from '@/components/layouts/topbar';
 import { MessageState } from '@/features/dashboard/MessageState';
-import { TitleBar } from '@/features/dashboard/TitleBar';
 import { SponsorLogos } from '@/features/sponsors/SponsorLogos';
 
 export default function DashboardIndexPage() {
@@ -18,62 +17,59 @@ export default function DashboardIndexPage() {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex min-h-screen w-full">
       <Sidebar collapsed={sidebarCollapsed} />
 
-      <div className="flex flex-1 flex-col overflow-auto bg-background dark:bg-slate-950">
+      <div className="flex flex-1 flex-col bg-background dark:bg-slate-950">
         <header className="flex h-16 items-center border-b px-4">
           <Topbar toggleSidebar={toggleSidebar} />
         </header>
 
         <main className="flex-1 p-6">
-          <TitleBar
-            title={t('title_bar')}
-            description={t('title_bar_description')}
-          />
+          <div className="flex h-full items-center justify-center">
+            <MessageState
+              icon={(
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M0 0h24v24H0z" stroke="none" />
+                  <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
+                </svg>
+              )}
+              title={t('message_state_title')}
+              description={t.rich('message_state_description', {
+                code: chunks => (
+                  <code className="bg-secondary text-secondary-foreground">
+                    {chunks}
+                  </code>
+                ),
+              })}
+              button={(
+                <>
+                  <div className="mt-2 text-xs font-light text-muted-foreground">
+                    {t.rich('message_state_alternative', {
+                      url: () => (
+                        <a
+                          className="text-blue-500 hover:text-blue-600"
+                          href="https://nextjs-boilerplate.com/pro-saas-starter-kit"
+                        >
+                          Next.js Boilerplate SaaS
+                        </a>
+                      ),
+                    })}
+                  </div>
 
-          <MessageState
-            icon={(
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M0 0h24v24H0z" stroke="none" />
-                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
-              </svg>
-            )}
-            title={t('message_state_title')}
-            description={t.rich('message_state_description', {
-              code: chunks => (
-                <code className="bg-secondary text-secondary-foreground">
-                  {chunks}
-                </code>
-              ),
-            })}
-            button={(
-              <>
-                <div className="mt-2 text-xs font-light text-muted-foreground">
-                  {t.rich('message_state_alternative', {
-                    url: () => (
-                      <a
-                        className="text-blue-500 hover:text-blue-600"
-                        href="https://nextjs-boilerplate.com/pro-saas-starter-kit"
-                      >
-                        Next.js Boilerplate SaaS
-                      </a>
-                    ),
-                  })}
-                </div>
-
-                <div className="mt-7">
-                  <SponsorLogos />
-                </div>
-              </>
-            )}
-          />
+                  <div className="mt-7">
+                    <SponsorLogos />
+                  </div>
+                </>
+              )}
+            />
+          </div>
         </main>
       </div>
     </div>

@@ -56,7 +56,7 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
 
   return (
     <aside className={cn(
-      'flex h-screen flex-col bg-background transition-all duration-300 border-r',
+      'flex flex-col bg-background transition-all duration-300 border-r',
       collapsed ? 'w-[70px]' : 'w-[240px]',
     )}
     >
@@ -66,7 +66,7 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
         </Link>
       </div>
 
-      <div className="flex-1 overflow-auto py-4">
+      <div className="py-4">
         <nav className="flex flex-col gap-2 px-2">
           {!collapsed && (
             <>
