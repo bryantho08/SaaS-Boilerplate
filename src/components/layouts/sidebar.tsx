@@ -1,55 +1,58 @@
 'use client';
 
 import {
+  Briefcase,
+  CalendarClock,
+  CheckCircle,
+  ClipboardList,
   CreditCard,
+  DollarSign,
+  FileText,
+  Folder,
   HomeIcon,
-  ListTodo,
+  LineChart,
   Settings,
-  UserCircle2,
+  User2,
+  UserCircle,
+  Users,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 
 import { Separator } from '@/components/ui/separator';
 import { Logo } from '@/templates/Logo';
 import { cn } from '@/utils/Helpers';
 
-export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
-  const t = useTranslations('DashboardLayout');
-  const locale = useLocale();
+type SidebarItemProps = {
+  href: string;
+  icon: React.ElementType;
+  children: React.ReactNode;
+  collapsed?: boolean;
+};
+
+const SidebarItem = ({ href, icon: Icon, children, collapsed = false }: SidebarItemProps) => {
   const pathname = usePathname();
+  const isActive = pathname === href;
 
-  const mainRoutes = [
-    {
-      href: `/${locale}/dashboard`,
-      label: t('home'),
-      icon: HomeIcon,
-    },
-    {
-      href: `/${locale}/dashboard/todo`,
-      label: 'Todos',
-      icon: ListTodo,
-    },
-  ];
+  return (
+    <Link
+      href={href}
+      className={cn(
+        'flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors',
+        isActive
+          ? 'bg-primary text-primary-foreground'
+          : 'text-muted-foreground hover:bg-muted hover:text-foreground',
+      )}
+    >
+      <Icon className="size-5" />
+      {!collapsed && <span>{children}</span>}
+    </Link>
+  );
+};
 
-  const orgRoutes = [
-    {
-      href: `/${locale}/dashboard/organization-profile/billing`,
-      label: 'Billing',
-      icon: CreditCard,
-    },
-    {
-      href: `/${locale}/dashboard/organization-profile/organization-members`,
-      label: t('members'),
-      icon: UserCircle2,
-    },
-    {
-      href: `/${locale}/dashboard/organization-profile`,
-      label: t('settings'),
-      icon: Settings,
-    },
-  ];
+export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
+  const locale = useLocale();
 
   return (
     <aside className={cn(
@@ -60,59 +63,120 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
       <div className="flex h-16 items-center px-4 py-3">
         <Link href={`/${locale}/dashboard`} className="flex items-center space-x-2">
           <Logo isTextHidden={collapsed} />
-          {!collapsed && <span className="text-lg font-semibold">Frelio</span>}
         </Link>
       </div>
 
       <div className="flex-1 overflow-auto py-4">
-        <nav className="flex flex-col gap-4 px-2">
+        <nav className="flex flex-col gap-2 px-2">
           {!collapsed && (
-            <p className="px-4 text-xs text-muted-foreground">Main navigation</p>
+            <>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">Menu</p>
+              <Separator className="my-1" />
+            </>
           )}
 
-          {mainRoutes.map((route) => {
-            const isActive = pathname === route.href;
-            return (
-              <Link
-                key={route.href}
-                href={route.href}
-                className={cn(
-                  'flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors',
-                  isActive
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-muted-foreground hover:bg-muted hover:text-foreground',
-                )}
-              >
-                <route.icon className="size-5" />
-                {!collapsed && <span>{route.label}</span>}
-              </Link>
-            );
-          })}
-
-          <Separator className="my-2" />
+          <SidebarItem href={`/${locale}/dashboard`} icon={HomeIcon} collapsed={collapsed}>
+            儀表板
+          </SidebarItem>
 
           {!collapsed && (
-            <p className="px-4 text-xs text-muted-foreground">Organization</p>
+            <>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">工作模組</p>
+              <Separator className="my-1" />
+            </>
           )}
 
-          {orgRoutes.map((route) => {
-            const isActive = pathname === route.href;
-            return (
-              <Link
-                key={route.href}
-                href={route.href}
-                className={cn(
-                  'flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors',
-                  isActive
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-muted-foreground hover:bg-muted hover:text-foreground',
-                )}
-              >
-                <route.icon className="size-5" />
-                {!collapsed && <span>{route.label}</span>}
-              </Link>
-            );
-          })}
+          <SidebarItem href={`/${locale}/projects`} icon={Folder} collapsed={collapsed}>
+            專案
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/tasks`} icon={CheckCircle} collapsed={collapsed}>
+            任務
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/todo`} icon={ClipboardList} collapsed={collapsed}>
+            待辦
+          </SidebarItem>
+
+          {!collapsed && (
+            <>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">客戶管理</p>
+              <Separator className="my-1" />
+            </>
+          )}
+
+          <SidebarItem href={`/${locale}/clients`} icon={User2} collapsed={collapsed}>
+            客戶
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/meetings`} icon={CalendarClock} collapsed={collapsed}>
+            會議
+          </SidebarItem>
+
+          {!collapsed && (
+            <>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">財務管理</p>
+              <Separator className="my-1" />
+            </>
+          )}
+
+          <SidebarItem href={`/${locale}/incomes`} icon={DollarSign} collapsed={collapsed}>
+            收入
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/expenses`} icon={DollarSign} collapsed={collapsed}>
+            支出
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/invoices`} icon={Folder} collapsed={collapsed}>
+            發票
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/proposals`} icon={FileText} collapsed={collapsed}>
+            提案
+          </SidebarItem>
+
+          {!collapsed && (
+            <>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">報表分析</p>
+              <Separator className="my-1" />
+            </>
+          )}
+
+          <SidebarItem href={`/${locale}/reports/actual-month`} icon={LineChart} collapsed={collapsed}>
+            本月概覽
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/reports/monthly`} icon={LineChart} collapsed={collapsed}>
+            月度報告
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/reports/yearly`} icon={LineChart} collapsed={collapsed}>
+            年度報告
+          </SidebarItem>
+
+          {!collapsed && (
+            <>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">個人資料</p>
+              <Separator className="my-1" />
+            </>
+          )}
+
+          <SidebarItem href={`/${locale}/profile`} icon={UserCircle} collapsed={collapsed}>
+            個人頁
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/resume`} icon={Briefcase} collapsed={collapsed}>
+            履歷
+          </SidebarItem>
+
+          {!collapsed && (
+            <>
+              <p className="mb-1 mt-4 px-4 text-xs font-semibold text-muted-foreground">Organization</p>
+              <Separator className="my-1" />
+            </>
+          )}
+
+          <SidebarItem href={`/${locale}/billing`} icon={CreditCard} collapsed={collapsed}>
+            Billing
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/members`} icon={Users} collapsed={collapsed}>
+            成員
+          </SidebarItem>
+          <SidebarItem href={`/${locale}/settings`} icon={Settings} collapsed={collapsed}>
+            設定
+          </SidebarItem>
         </nav>
       </div>
     </aside>
