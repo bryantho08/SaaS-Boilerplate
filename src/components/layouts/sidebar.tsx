@@ -174,10 +174,10 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
           <SidebarItem href={`/${locale}/billing`} icon={CreditCard} collapsed={collapsed}>
             訂閱
           </SidebarItem>
-          <SidebarItem href={`/${locale}/members`} icon={Users} collapsed={collapsed}>
+          <SidebarItem href={`/${locale}/dashboard/organization-profile/organization-members`} icon={Users} collapsed={collapsed}>
             成員
           </SidebarItem>
-          <SidebarItem href={`/${locale}/settings`} icon={Settings} collapsed={collapsed}>
+          <SidebarItem href={`/${locale}/dashboard/organization-profile`} icon={Settings} collapsed={collapsed}>
             設定
           </SidebarItem>
         </nav>
